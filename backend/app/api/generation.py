@@ -155,10 +155,27 @@ def export_document(
             from fpdf import FPDF
             import re
 
+            def sanitize_for_pdf(text: str) -> str:
+                """Remove or replace characters not supported by basic PDF fonts."""
+                # Replace box drawing and other special characters
+                replacements = {
+                    '├': '|--', '└': '`--', '│': '|', '─': '-',
+                    '┌': '+--', '┐': '--+', '┘': '--+', '┤': '|',
+                    '•': '*', '→': '->', '←': '<-', '↑': '^', '↓': 'v',
+                    '✓': '[x]', '✗': '[ ]', '★': '*', '☆': '*',
+                    '"': '"', '"': '"', ''': "'", ''': "'",
+                    '…': '...', '–': '-', '—': '-',
+                }
+                for old, new in replacements.items():
+                    text = text.replace(old, new)
+                # Remove any remaining non-Latin1 characters
+                text = text.encode('latin-1', errors='replace').decode('latin-1')
+                return text
+
             class PDF(FPDF):
                 def header(self):
                     self.set_font('Helvetica', 'B', 12)
-                    self.cell(0, 10, document.title, align='C', new_x='LMARGIN', new_y='NEXT')
+                    self.cell(0, 10, sanitize_for_pdf(document.title), align='C', new_x='LMARGIN', new_y='NEXT')
                     self.ln(5)
 
                 def footer(self):
@@ -172,7 +189,7 @@ def export_document(
 
             # Title
             pdf.set_font('Helvetica', 'B', 24)
-            pdf.cell(0, 15, document.title, new_x='LMARGIN', new_y='NEXT')
+            pdf.cell(0, 15, sanitize_for_pdf(document.title), new_x='LMARGIN', new_y='NEXT')
             pdf.ln(10)
 
             for section in document.sections:
@@ -182,7 +199,7 @@ def export_document(
                 # Section title
                 pdf.set_font('Helvetica', 'B', 16)
                 pdf.set_text_color(51, 51, 51)
-                pdf.cell(0, 10, section.title, new_x='LMARGIN', new_y='NEXT')
+                pdf.cell(0, 10, sanitize_for_pdf(section.title), new_x='LMARGIN', new_y='NEXT')
                 pdf.ln(3)
 
                 # Section content
@@ -194,6 +211,7 @@ def export_document(
                     content = re.sub(r'^#{1,6}\s+', '', content, flags=re.MULTILINE)  # Headers
                     content = re.sub(r'`(.+?)`', r'\1', content)  # Inline code
                     content = re.sub(r'```[\s\S]*?```', '[Code Block]', content)  # Code blocks
+                    content = sanitize_for_pdf(content)
 
                     pdf.set_font('Helvetica', '', 11)
                     pdf.set_text_color(0, 0, 0)
