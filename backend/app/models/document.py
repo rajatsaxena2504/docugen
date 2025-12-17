@@ -1,0 +1,83 @@
+import uuid
+from datetime import datetime
+from sqlalchemy import Column, String, Text, DateTime, ForeignKey, Boolean, Integer
+from sqlalchemy.orm import relationship
+from app.database import Base
+from app.models.types import GUID
+
+
+class Document(Base):
+    __tablename__ = "documents"
+
+    id = Column(GUID(), primary_key=True, default=uuid.uuid4)
+    project_id = Column(
+        GUID(),
+        ForeignKey("projects.id", ondelete="CASCADE"),
+        nullable=False,
+    )
+    document_type_id = Column(GUID(), ForeignKey("document_types.id"))
+    user_id = Column(
+        GUID(),
+        ForeignKey("users.id", ondelete="CASCADE"),
+        nullable=False,
+    )
+    title = Column(String(500), nullable=False)
+    status = Column(String(50), default="draft")  # draft, sections_approved, generating, completed
+    created_at = Column(DateTime, default=datetime.utcnow)
+    updated_at = Column(DateTime, default=datetime.utcnow, onupdate=datetime.utcnow)
+
+    # Relationships
+    project = relationship("Project", back_populates="documents")
+    document_type = relationship("DocumentType", back_populates="documents")
+    user = relationship("User", back_populates="documents")
+    sections = relationship(
+        "DocumentSection",
+        back_populates="document",
+        cascade="all, delete-orphan",
+        order_by="DocumentSection.display_order",
+    )
+
+
+class DocumentSection(Base):
+    __tablename__ = "document_sections"
+
+    id = Column(GUID(), primary_key=True, default=uuid.uuid4)
+    document_id = Column(
+        GUID(),
+        ForeignKey("documents.id", ondelete="CASCADE"),
+        nullable=False,
+    )
+    section_id = Column(GUID(), ForeignKey("sections.id"), nullable=True)
+    custom_title = Column(String(255))
+    custom_description = Column(Text)
+    display_order = Column(Integer, nullable=False)
+    is_included = Column(Boolean, default=True)
+    created_at = Column(DateTime, default=datetime.utcnow)
+
+    # Relationships
+    document = relationship("Document", back_populates="sections")
+    section = relationship("Section", back_populates="document_sections")
+    generated_content = relationship(
+        "GeneratedContent",
+        back_populates="document_section",
+        cascade="all, delete-orphan",
+        order_by="GeneratedContent.version.desc()",
+    )
+
+    @property
+    def title(self) -> str:
+        """Get the effective title (custom or from section library)."""
+        if self.custom_title:
+            return self.custom_title
+        if self.section:
+            return self.section.name
+        return "Untitled Section"
+
+    @property
+    def description(self) -> str:
+        """Get the effective description (custom or from section library)."""
+        if self.custom_description:
+            return self.custom_description
+        if self.section:
+            return self.section.description
+        return ""

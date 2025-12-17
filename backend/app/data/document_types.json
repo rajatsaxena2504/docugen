@@ -1,0 +1,97 @@
+[
+  {
+    "id": "550e8400-e29b-41d4-a716-446655440006",
+    "name": "Requirements Document",
+    "description": "Comprehensive requirements documentation including user stories, functional and non-functional requirements, use cases, and acceptance criteria.",
+    "default_sections": [
+      "550e8400-e29b-41d4-a716-446655440101",
+      "550e8400-e29b-41d4-a716-446655440136",
+      "550e8400-e29b-41d4-a716-446655440131",
+      "550e8400-e29b-41d4-a716-446655440132",
+      "550e8400-e29b-41d4-a716-446655440133",
+      "550e8400-e29b-41d4-a716-446655440134",
+      "550e8400-e29b-41d4-a716-446655440135"
+    ]
+  },
+  {
+    "id": "550e8400-e29b-41d4-a716-446655440007",
+    "name": "Design Document",
+    "description": "System design documentation including architecture, design principles, component design, data models, and integration points.",
+    "default_sections": [
+      "550e8400-e29b-41d4-a716-446655440101",
+      "550e8400-e29b-41d4-a716-446655440137",
+      "550e8400-e29b-41d4-a716-446655440102",
+      "550e8400-e29b-41d4-a716-446655440103",
+      "550e8400-e29b-41d4-a716-446655440138",
+      "550e8400-e29b-41d4-a716-446655440104",
+      "550e8400-e29b-41d4-a716-446655440139"
+    ]
+  },
+  {
+    "id": "550e8400-e29b-41d4-a716-446655440001",
+    "name": "Technical Specification Document",
+    "description": "Comprehensive technical documentation for software projects including architecture, implementation details, and technical decisions.",
+    "default_sections": [
+      "550e8400-e29b-41d4-a716-446655440101",
+      "550e8400-e29b-41d4-a716-446655440102",
+      "550e8400-e29b-41d4-a716-446655440103",
+      "550e8400-e29b-41d4-a716-446655440104",
+      "550e8400-e29b-41d4-a716-446655440105",
+      "550e8400-e29b-41d4-a716-446655440106",
+      "550e8400-e29b-41d4-a716-446655440107"
+    ]
+  },
+  {
+    "id": "550e8400-e29b-41d4-a716-446655440002",
+    "name": "API Documentation",
+    "description": "API reference documentation including endpoints, request/response formats, authentication, and usage examples.",
+    "default_sections": [
+      "550e8400-e29b-41d4-a716-446655440101",
+      "550e8400-e29b-41d4-a716-446655440108",
+      "550e8400-e29b-41d4-a716-446655440109",
+      "550e8400-e29b-41d4-a716-446655440110",
+      "550e8400-e29b-41d4-a716-446655440111",
+      "550e8400-e29b-41d4-a716-446655440112"
+    ]
+  },
+  {
+    "id": "550e8400-e29b-41d4-a716-446655440003",
+    "name": "User Guide",
+    "description": "End-user documentation explaining how to use the software, including setup, features, and common tasks.",
+    "default_sections": [
+      "550e8400-e29b-41d4-a716-446655440101",
+      "550e8400-e29b-41d4-a716-446655440113",
+      "550e8400-e29b-41d4-a716-446655440114",
+      "550e8400-e29b-41d4-a716-446655440115",
+      "550e8400-e29b-41d4-a716-446655440116",
+      "550e8400-e29b-41d4-a716-446655440117"
+    ]
+  },
+  {
+    "id": "550e8400-e29b-41d4-a716-446655440004",
+    "name": "README",
+    "description": "Standard README documentation for repositories including overview, installation, usage, and contribution guidelines.",
+    "default_sections": [
+      "550e8400-e29b-41d4-a716-446655440101",
+      "550e8400-e29b-41d4-a716-446655440118",
+      "550e8400-e29b-41d4-a716-446655440113",
+      "550e8400-e29b-41d4-a716-446655440119",
+      "550e8400-e29b-41d4-a716-446655440120",
+      "550e8400-e29b-41d4-a716-446655440121"
+    ]
+  },
+  {
+    "id": "550e8400-e29b-41d4-a716-446655440005",
+    "name": "Developer Guide",
+    "description": "Documentation for developers working on or with the codebase, including setup, architecture, and coding guidelines.",
+    "default_sections": [
+      "550e8400-e29b-41d4-a716-446655440101",
+      "550e8400-e29b-41d4-a716-446655440122",
+      "550e8400-e29b-41d4-a716-446655440103",
+      "550e8400-e29b-41d4-a716-446655440123",
+      "550e8400-e29b-41d4-a716-446655440124",
+      "550e8400-e29b-41d4-a716-446655440125",
+      "550e8400-e29b-41d4-a716-446655440126"
+    ]
+  }
+]

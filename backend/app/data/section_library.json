@@ -1,0 +1,236 @@
+[
+  {
+    "id": "550e8400-e29b-41d4-a716-446655440101",
+    "name": "Overview",
+    "description": "Provide a high-level overview of the project including its purpose, main features, and target audience. Explain what problem it solves and why it exists.",
+    "default_order": 1
+  },
+  {
+    "id": "550e8400-e29b-41d4-a716-446655440102",
+    "name": "System Architecture",
+    "description": "Describe the overall system architecture including components, their relationships, and data flow. Include diagrams where helpful and explain key architectural decisions.",
+    "default_order": 2
+  },
+  {
+    "id": "550e8400-e29b-41d4-a716-446655440103",
+    "name": "Technology Stack",
+    "description": "List and describe all technologies, frameworks, libraries, and tools used in the project. Explain why each was chosen and its role in the system.",
+    "default_order": 3
+  },
+  {
+    "id": "550e8400-e29b-41d4-a716-446655440104",
+    "name": "Data Models",
+    "description": "Document the data models, database schema, and entity relationships. Include field descriptions, constraints, and relationships between entities.",
+    "default_order": 4
+  },
+  {
+    "id": "550e8400-e29b-41d4-a716-446655440105",
+    "name": "Core Components",
+    "description": "Detail the main components/modules of the system, their responsibilities, and how they interact with each other.",
+    "default_order": 5
+  },
+  {
+    "id": "550e8400-e29b-41d4-a716-446655440106",
+    "name": "Security Considerations",
+    "description": "Document security measures, authentication mechanisms, authorization rules, and any security-related configurations or best practices.",
+    "default_order": 6
+  },
+  {
+    "id": "550e8400-e29b-41d4-a716-446655440107",
+    "name": "Performance Considerations",
+    "description": "Discuss performance optimizations, caching strategies, scalability considerations, and any performance-related configurations.",
+    "default_order": 7
+  },
+  {
+    "id": "550e8400-e29b-41d4-a716-446655440108",
+    "name": "Authentication",
+    "description": "Document the authentication methods supported by the API, including how to obtain tokens, authentication headers, and security requirements.",
+    "default_order": 2
+  },
+  {
+    "id": "550e8400-e29b-41d4-a716-446655440109",
+    "name": "API Endpoints",
+    "description": "List all API endpoints with their HTTP methods, paths, parameters, request bodies, and response formats. Include example requests and responses.",
+    "default_order": 3
+  },
+  {
+    "id": "550e8400-e29b-41d4-a716-446655440110",
+    "name": "Request/Response Formats",
+    "description": "Document the standard request and response formats, including headers, content types, pagination, and error response structures.",
+    "default_order": 4
+  },
+  {
+    "id": "550e8400-e29b-41d4-a716-446655440111",
+    "name": "Error Handling",
+    "description": "Document error codes, error response formats, and how to handle different types of errors returned by the API.",
+    "default_order": 5
+  },
+  {
+    "id": "550e8400-e29b-41d4-a716-446655440112",
+    "name": "Rate Limiting",
+    "description": "Document rate limiting policies, headers, and how to handle rate limit errors. Include best practices for API usage.",
+    "default_order": 6
+  },
+  {
+    "id": "550e8400-e29b-41d4-a716-446655440113",
+    "name": "Installation",
+    "description": "Provide step-by-step installation instructions including prerequisites, dependencies, and platform-specific considerations.",
+    "default_order": 2
+  },
+  {
+    "id": "550e8400-e29b-41d4-a716-446655440114",
+    "name": "Getting Started",
+    "description": "A quick start guide to help users get up and running quickly. Include the minimal steps needed to use the software.",
+    "default_order": 3
+  },
+  {
+    "id": "550e8400-e29b-41d4-a716-446655440115",
+    "name": "Features",
+    "description": "Document all major features of the software, how to access them, and what they do. Include screenshots or examples where helpful.",
+    "default_order": 4
+  },
+  {
+    "id": "550e8400-e29b-41d4-a716-446655440116",
+    "name": "Configuration",
+    "description": "Document all configuration options, environment variables, and settings. Explain what each option does and its default values.",
+    "default_order": 5
+  },
+  {
+    "id": "550e8400-e29b-41d4-a716-446655440117",
+    "name": "Troubleshooting",
+    "description": "Document common issues, error messages, and their solutions. Include debugging tips and where to find logs.",
+    "default_order": 6
+  },
+  {
+    "id": "550e8400-e29b-41d4-a716-446655440118",
+    "name": "Features Overview",
+    "description": "A brief overview of the main features and capabilities of the project. Keep it concise and highlight key functionality.",
+    "default_order": 2
+  },
+  {
+    "id": "550e8400-e29b-41d4-a716-446655440119",
+    "name": "Usage Examples",
+    "description": "Provide practical examples of how to use the software including code snippets, commands, and expected outputs.",
+    "default_order": 4
+  },
+  {
+    "id": "550e8400-e29b-41d4-a716-446655440120",
+    "name": "Contributing",
+    "description": "Guidelines for contributing to the project including code style, pull request process, and how to report issues.",
+    "default_order": 5
+  },
+  {
+    "id": "550e8400-e29b-41d4-a716-446655440121",
+    "name": "License",
+    "description": "Information about the project's license and any usage restrictions or requirements.",
+    "default_order": 6
+  },
+  {
+    "id": "550e8400-e29b-41d4-a716-446655440122",
+    "name": "Development Setup",
+    "description": "Instructions for setting up a development environment including IDE configuration, debugging setup, and development tools.",
+    "default_order": 2
+  },
+  {
+    "id": "550e8400-e29b-41d4-a716-446655440123",
+    "name": "Code Structure",
+    "description": "Explain the project's directory structure, file organization, and naming conventions. Help developers navigate the codebase.",
+    "default_order": 4
+  },
+  {
+    "id": "550e8400-e29b-41d4-a716-446655440124",
+    "name": "Coding Standards",
+    "description": "Document coding standards, style guides, and best practices to follow when contributing to the project.",
+    "default_order": 5
+  },
+  {
+    "id": "550e8400-e29b-41d4-a716-446655440125",
+    "name": "Testing",
+    "description": "Document how to run tests, write new tests, and the testing strategy. Include information about test coverage and CI/CD.",
+    "default_order": 6
+  },
+  {
+    "id": "550e8400-e29b-41d4-a716-446655440126",
+    "name": "Deployment",
+    "description": "Document deployment procedures, environments, and any deployment-specific configurations or considerations.",
+    "default_order": 7
+  },
+  {
+    "id": "550e8400-e29b-41d4-a716-446655440127",
+    "name": "Dependencies",
+    "description": "List and describe project dependencies, their versions, and any special considerations for dependency management.",
+    "default_order": 8
+  },
+  {
+    "id": "550e8400-e29b-41d4-a716-446655440128",
+    "name": "Environment Variables",
+    "description": "Document all environment variables used by the application, their purposes, and example values.",
+    "default_order": 9
+  },
+  {
+    "id": "550e8400-e29b-41d4-a716-446655440129",
+    "name": "Database Setup",
+    "description": "Instructions for setting up and configuring the database, including migrations and seed data.",
+    "default_order": 10
+  },
+  {
+    "id": "550e8400-e29b-41d4-a716-446655440130",
+    "name": "Changelog",
+    "description": "Document version history, changes, new features, bug fixes, and breaking changes between versions.",
+    "default_order": 11
+  },
+  {
+    "id": "550e8400-e29b-41d4-a716-446655440131",
+    "name": "User Stories",
+    "description": "Document user stories in the format 'As a [type of user], I want [goal] so that [benefit]'. Include acceptance criteria for each story.",
+    "default_order": 2
+  },
+  {
+    "id": "550e8400-e29b-41d4-a716-446655440132",
+    "name": "Functional Requirements",
+    "description": "List all functional requirements that define what the system should do. Include requirement IDs, descriptions, priorities, and status.",
+    "default_order": 3
+  },
+  {
+    "id": "550e8400-e29b-41d4-a716-446655440133",
+    "name": "Non-Functional Requirements",
+    "description": "Document non-functional requirements including performance, scalability, security, reliability, and usability requirements.",
+    "default_order": 4
+  },
+  {
+    "id": "550e8400-e29b-41d4-a716-446655440134",
+    "name": "Use Cases",
+    "description": "Document use cases with actors, preconditions, main flow, alternative flows, and postconditions. Include use case diagrams where helpful.",
+    "default_order": 5
+  },
+  {
+    "id": "550e8400-e29b-41d4-a716-446655440135",
+    "name": "Acceptance Criteria",
+    "description": "Define acceptance criteria for features and requirements. Specify conditions that must be met for the requirement to be considered complete.",
+    "default_order": 6
+  },
+  {
+    "id": "550e8400-e29b-41d4-a716-446655440136",
+    "name": "Scope and Boundaries",
+    "description": "Define what is in scope and out of scope for the project. Clarify boundaries and limitations of the system.",
+    "default_order": 2
+  },
+  {
+    "id": "550e8400-e29b-41d4-a716-446655440137",
+    "name": "Design Principles",
+    "description": "Document the design principles, patterns, and guidelines followed in the system design. Explain architectural decisions and trade-offs.",
+    "default_order": 2
+  },
+  {
+    "id": "550e8400-e29b-41d4-a716-446655440138",
+    "name": "Component Design",
+    "description": "Detailed design of individual components including interfaces, class diagrams, sequence diagrams, and component interactions.",
+    "default_order": 4
+  },
+  {
+    "id": "550e8400-e29b-41d4-a716-446655440139",
+    "name": "Integration Points",
+    "description": "Document integration points with external systems, APIs, and services. Include data formats, protocols, and error handling.",
+    "default_order": 5
+  }
+]
